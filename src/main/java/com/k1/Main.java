@@ -1,3 +1,5 @@
+package com.k1;
+
 import java.net.URISyntaxException;
 
 public class Main {

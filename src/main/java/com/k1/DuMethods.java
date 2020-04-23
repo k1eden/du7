@@ -1,3 +1,5 @@
+package com.k1;
+
 import java.io.File;
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -10,7 +12,7 @@ public class DuMethods {
     private Boolean siFlag = false;
     public HashMap<String, Long> nameSize = new HashMap<String, Long>();
 
-    void parser(String[] args) {
+   public void parser(String[] args) {
         if (args[0].equals("du")) {
             for (String i : args) {
                 if (i.equals("[-h]")) this.hFlag = true; else
@@ -21,7 +23,7 @@ public class DuMethods {
         } else throw new IllegalArgumentException("please start your request with 'du'");
     }
 
-    void size() throws URISyntaxException {
+    public void size() throws URISyntaxException {
         for (String name : nameSize.keySet()) {
             URL res = getClass().getClassLoader().getResource("Котики/" + name);
             File testFile = Paths.get(res.toURI()).toFile();

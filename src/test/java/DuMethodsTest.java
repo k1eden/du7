@@ -1,4 +1,5 @@
 
+import com.k1.DuMethods;
 import org.junit.jupiter.api.Test;
 
 import java.net.URISyntaxException;
