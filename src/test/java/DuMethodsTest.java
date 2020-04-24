@@ -28,6 +28,18 @@ class DuMethodsTest {
         exam.size();
         Map.Entry<String,Long> entry = exam.nameSize.entrySet().iterator().next();
         assertEquals(8035,entry.getValue());
+        exam.nameSize.clear();
+        exp = "du [-h] 2.jpg".split(" ");
+        exam.parser(exp);
+        exam.size();
+        Map.Entry<String,Long> entry1 = exam.nameSize.entrySet().iterator().next();
+        assertEquals(44407,entry1.getValue());
+        exam.nameSize.clear();
+        exp = "du [-h] 1.jpg".split(" ");
+        exam.parser(exp);
+        exam.size();
+        Map.Entry<String,Long> entry2 = exam.nameSize.entrySet().iterator().next();
+        assertEquals(55183,entry2.getValue());
     }
 
     @Test
